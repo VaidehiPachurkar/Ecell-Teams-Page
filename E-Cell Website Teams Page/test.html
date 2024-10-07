@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two members on top row */
+            grid-gap: 20px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .team-member h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Media Query to ensure 3 members on the bottom row */
+        @media (min-width: 768px) {
+            .team-container {
+                grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+            }
+
+            .team-member:nth-child(1),
+            .team-member:nth-child(2) {
+                grid-column: span 3; /* First two members span two columns */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="team-container">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Member 1">
+            <h3>Member 1</h3>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Member 2">
+            <h3>Member 2</h3>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Member 3">
+            <h3>Member 3</h3>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Member 4">
+            <h3>Member 4</h3>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Member 5">
+            <h3>Member 5</h3>
+        </div>
+    </div>
+
+</body>
+</html>
